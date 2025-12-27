@@ -32,42 +32,7 @@ The Carrefour Traffic Intersection Simulation is an educational Java application
 - Java JDK 8 or higher
 - Apache Ant (optional, for building)
 
-## Project Structure
 
-```
-Carrefour-main/
-├── carrefour/                    # Main project directory
-│   ├── src/
-│   │   └── carrefour/            # Source code (package: carrefour)
-│   │       ├── CarrefourApp.java          # Main application entry point
-│   │       ├── CarrefourFrame.java        # Main GUI frame
-│   │       ├── TrafficController.java     # Traffic light controller
-│   │       ├── Semaphore.java             # Custom semaphore implementation
-│   │       ├── VerticalVehicle.java       # Vertical lane vehicles
-│   │       ├── HorizontalVehicle.java     # Horizontal lane vehicles
-│   │       ├── StatisticsTracker.java     # Statistics collection engine
-│   │       ├── StatisticsPanel.java      # Statistics display panel
-│   │       ├── Vehicle.java                # Vehicle interface
-│   │       ├── VehicleSprite.java         # Vehicle sprite base class
-│   │       ├── TaxiSprite.java            # Vertical taxi sprite
-│   │       ├── Taxi16Sprite.java           # Horizontal taxi sprite
-│   │       └── VehicleLanePanel.java      # Lane display panel
-│   ├── resources/                # Application resources
-│   │   ├── taxi.png              # Vertical vehicle sprite
-│   │   ├── taxi16.png             # Horizontal vehicle sprite
-│   │   ├── traficverre.jpg        # Green traffic light image
-│   │   └── traficrouge.jpg        # Red traffic light image
-│   ├── docs/                      # Documentation
-│   │   ├── REFACTORING_SUMMARY.md
-│   │   ├── NEW_FEATURE_SUMMARY.md
-│   │   └── CLEANUP_SUMMARY.md
-│   ├── build/                     # Compiled classes (generated)
-│   ├── dist/                      # JAR distribution (generated)
-│   ├── nbproject/                 # NetBeans project configuration
-│   ├── build.xml                  # Apache Ant build file
-│   └── manifest.mf                # JAR manifest
-└── README.md                      # This file
-```
 
 ## Building the Project
 
@@ -134,45 +99,6 @@ java -cp "build/classes:resources:." carrefour.CarrefourApp
 4. **Statistics**: Tracks all vehicle movements and wait times
 5. **Display**: Updates GUI and statistics panel in real-time
 
-## Configuration
-
-### Adjusting Vehicle Count
-Edit `carrefour/src/carrefour/CarrefourApp.java`:
-```java
-private static final int VEHICLE_COUNT = 100; // Change this value
-```
-
-### Adjusting Traffic Light Timing
-Edit `carrefour/src/carrefour/TrafficController.java`:
-```java
-private static final int TRAFFIC_LIGHT_CHANGE_INTERVAL_MS = 2000; // Change this value
-```
-
-### Adjusting Vehicle Spawn Rate
-Edit `carrefour/src/carrefour/CarrefourApp.java`:
-```java
-private static final int VEHICLE_SPAWN_DELAY_MS = 600; // Change this value
-```
-
-## Documentation
-
-See the `carrefour/docs/` folder for detailed documentation:
-- **REFACTORING_SUMMARY.md**: Details about code improvements and best practices applied
-- **NEW_FEATURE_SUMMARY.md**: Complete documentation for the statistics panel feature
-- **CLEANUP_SUMMARY.md**: Repository cleanup and preparation documentation
-
-## Code Quality
-
-This project follows Java best practices:
-- ✅ Proper naming conventions (PascalCase for classes)
-- ✅ Comprehensive JavaDoc comments
-- ✅ Thread-safe implementations
-- ✅ Proper error handling
-- ✅ Separation of concerns
-- ✅ DRY (Don't Repeat Yourself) principles
-- ✅ Organized package structure
-
-## Educational Value
 
 This project is excellent for learning:
 - Multi-threaded programming concepts
@@ -182,14 +108,3 @@ This project is excellent for learning:
 - Real-time system design
 - Statistics collection and display
 
-## License
-
-This project is part of an educational assignment and is provided for learning purposes.
-
-## Contributing
-
-This is an educational project. Feel free to fork, modify, and learn from it!
-
-## Author
-
-Developed as part of a third-year college project to demonstrate concurrent programming concepts.
